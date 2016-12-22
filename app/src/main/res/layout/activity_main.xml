@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
+
+    <com.llf.salaryprogress.BothwayProgressView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        >
+        <!--中间横杠-->
+        <View
+            android:id="@+id/view_progress"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/progress_select"
+            />
+        <!--左边滑块-->
+        <LinearLayout
+            android:id="@+id/slide_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_salary_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_number_unselect"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingTop="2dp"
+                android:text="1K"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/progress_nomal"
+                />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow"/>
+        </LinearLayout>
+
+
+        <!--左边滑块-->
+        <LinearLayout
+            android:id="@+id/slide_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_salary_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_number_unselect"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingTop="2dp"
+                android:text="100K"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/progress_nomal"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow"
+                />
+        </LinearLayout>
+    </com.llf.salaryprogress.BothwayProgressView>
+</RelativeLayout>
